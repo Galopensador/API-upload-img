@@ -21,7 +21,9 @@ app.use((req, res, next) => {
 });
 
 // Define que todas as rotas iniciadas com "/picture" serão tratadas pelo pictureRouter.
-app.use("/picture", pictureRouter);
+app.use("/pictures", pictureRouter);
+
+
 
 app.listen(port, () => { // Inicia o servidor e o faz escutar na porta definida.
     console.log(`Servidor rodando na porta ${port}`); // Exibe uma mensagem no console indicando que o servidor está rodando.
