@@ -55,7 +55,7 @@
     background-color: #2980b9;
   }
   
-  .btn-delete {
+  .delete-btn {
     background-color: #e74c3c;
     color: white;
     border: none;
@@ -98,6 +98,8 @@
   }
   
   .photo-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
     padding: 15px;
   }
   
