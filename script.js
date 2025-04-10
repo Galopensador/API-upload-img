@@ -106,10 +106,12 @@ function handleOutsideClick(event) {
 
 function handleFormSubmit(event) {
     event.preventDefault();
+
+    const formData = new formData();
     formData.append("name", elements.nameInput.value);
     formData.append("file", elements.fileInput.files[0]);
 
-    uploadNewPhoto(photoData);
+    uploadNewPhoto(formData);
 }
 
 async function loadAndDisplayPhotos() {
