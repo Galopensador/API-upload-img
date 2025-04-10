@@ -4,6 +4,7 @@
  * Ele utiliza o Multer para upload de arquivos e delega a lógica ao PictureController.
  */
 
+const PictureController = require("../controllers/PictureControllers"); // Importa o controlador de imagens.
 
 // Rota para criar uma nova imagem, utilizando o middleware de upload de arquivo.
 router.post("/", upload.single("file"), PictureController.create);

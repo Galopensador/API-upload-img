@@ -11,4 +11,4 @@ const PictureSchema = new Schema({
 });
 
 // Exportando o modelo em outros arquivos
-module.exports = mongoose.model('Picture', pictureSchema);
+module.exports = mongoose.model('Picture', PictureSchema);
