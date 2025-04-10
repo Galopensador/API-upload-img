@@ -1,30 +1,37 @@
-const express = require("express"); // Importa o framework Express para criar e gerenciar o servidor web.
-const app = express(); // Cria uma instância do Express para configurar o servidor.
+// Importa o Express para criar o servidor e chamar as rotas
+const express = require("express");
 
-// Carrega variáveis de ambiente do arquivo .env para process.env.
-require("dotenv").config(); 
+// Cria uma instância do Express
+const app = express();
 
-// Importa e executa o arquivo de configuração do banco de dados (db.js).
-require("./db"); 
+// Carrega as variáveis de ambiente do .ENV
+require("dotenv").config();
 
-// Define a porta do servidor, usando a variável de ambiente PORT ou 3000 como padrão.
-const port = process.env.PORT || 3000; 
+// Estabelece a conexão com o DB
+require("./db");
 
-// Importa o roteador para gerenciar as rotas relacionadas a "picture".
+// Define a porta do servidor, ou do .ENV ou 3000 por padrão
+const port = process.env.PORT || 3000;
+
+// Importa o roteador de imagens para gerenciar as rotas criadas
 const pictureRouter = require("./routes/picture");
 
+// Configuração de CORS
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*"); // Define que qualquer origem pode acessar a API.
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, "); // Define os métodos permitidos.
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); // Define os cabeçalhos permitidos.
-    next(); // Chama a próxima função middleware.    
+  // Permitindo qualquer origem req. para o Servidor
+  res.header("Access-Control-Allow-Origin", "*");
+  // Permitindo os métodos nas req.
+  res.header("Access-Control-Allow-Methods", "GET, POST, DELETE");
+  // Permite que o cabeçalho Content-Type, seja enviado nas req.
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  // Chama a rota de processamento
+  next();
 });
 
-// Define que todas as rotas iniciadas com "/picture" serão tratadas pelo pictureRouter.
+// Define que todas as rotas são "localhost:3000/pictures"
 app.use("/pictures", pictureRouter);
 
-
-
-app.listen(port, () => { // Inicia o servidor e o faz escutar na porta definida.
-    console.log(`Servidor rodando na porta ${port}`); // Exibe uma mensagem no console indicando que o servidor está rodando.
+// Inicia o servidor, e exibe uma mensagem ao usuario
+app.listen(port, () => {
+  console.log(`O servidor executa na porta ${port}`);
 });
