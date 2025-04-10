@@ -1,4 +1,4 @@
-const express = require('express'); // Importa o framework Express para criar e gerenciar o servidor web.
+const express = require("express"); // Importa o framework Express para criar e gerenciar o servidor web.
 const app = express(); // Cria uma instância do Express para configurar o servidor.
 
 // Carrega variáveis de ambiente do arquivo .env para process.env.

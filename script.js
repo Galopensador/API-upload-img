@@ -2,7 +2,7 @@
 const elements = {
     photoGrid: document.getElementById("photoGrid"), // Grade onde as fotos serão exibidas
     uploadModal: document.getElementById("uploadModal"), // Modal para upload de fotos
-    addPhoroButton: document.getElementById("addPhotoBtn"), // Botão para abrir o modal de upload
+    addPhotoButton: document.getElementById("addPhotoBtn"), // Botão para abrir o modal de upload
     closeButton: document.querySelector(".close"), // Botão para fechar o modal de upload
     uploadForm: document.getElementById("uploadForm"), // Formulário de upload de fotos
     toast: document.getElementById("toast"), // Elemento para exibir notificações
