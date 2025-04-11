@@ -27,3 +27,4 @@ Em seguida instale os modulos se nao os tiver claro
     multer
     noodemon
 ```
+Nao acabei README entao calma que jaja sai o restante.
