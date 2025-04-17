@@ -96,3 +96,7 @@ API-upload-img/
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+## Agradecimentos
+
+- Ao Docente(Professor) **_Gabriel Godoy_** por ajudar a gente nessa atividade durante o curso técnico.
