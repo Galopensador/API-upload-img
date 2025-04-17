@@ -1,30 +1,43 @@
+## Como Usar
 
-# Galeria de Fotos usando o JavaScript e mongoDB
+1. Clone o repositório para sua máquina local:
+  ```bash
+  git clone https://github.com/Galopensador/API-upload-img.git
+  ```
 
-bom é um projeto que fizemos em aula juntamente ao professor Gabriel Godoy, sobre uma aplicação usando o JavaScript e o mongoDB, e integrando os dois.
+2. Navegue até o diretório do projeto:
+  ```bash
+  cd <NOME_DO_DIRETORIO>
+  ```
+
+3. Instale as dependências necessárias:
+  ```bash
+  npm install
+  ```
+
+4. Configure as variáveis de ambiente:
+  - Crie um arquivo `.env` na raiz do projeto.
+  - Adicione as seguintes variáveis:
+    ```env
+    MONGO_URI=<SUA_CONEXAO_MONGO>
+    PORT=<PORTA_DESEJADA>
+    ```
+
+5. Inicie o servidor:
+  ```bash
+  npm start
+  ```
+
+6. Acesse a aplicação no navegador:
+  - URL padrão: `http://localhost:<PORTA_DESEJADA>`
+
+## Tecnologias Usadas
+
+- **JavaScript**: Linguagem principal para o desenvolvimento da aplicação.
+- **MongoDB**: Banco de dados NoSQL para armazenar as informações das imagens.
+- **Express**: Framework para criar o servidor e gerenciar rotas.
+- **Multer**: Middleware para upload de arquivos.
+- **dotenv**: Gerenciamento de variáveis de ambiente.
+- **Nodemon**: Ferramenta para reiniciar automaticamente o servidor durante o desenvolvimento.
 
 
-## Funcionalidades
-
-- Conseguimos Adicionar somente imagens
-- nomealas 
-- excluilas
-- alterar ainda esta em faze de teste
-
-
-## Instalação
-
-Instale o package.json
-
-```bash
-  npm install 
-```
-Em seguida instale os modulos se nao os tiver claro
-```bash
-    dotenv
-    express
-    mongoose
-    multer
-    noodemon
-```
-Nao acabei README entao calma que jaja sai o restante.
